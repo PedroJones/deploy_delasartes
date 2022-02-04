@@ -1,0 +1,101 @@
+
+import { Box, Card, Grid, Typography } from '@mui/material';
+import React, { useEffect } from 'react'
+import { Nav } from 'react-bootstrap';
+import Footer from '../../components/estaticos/footer/Footer';
+import Navbar from '../../components/estaticos/navbar/Navbar';
+import './Sobre.css'
+import { CardActionArea } from '@mui/material';
+import CardMedia from '@mui/material/CardMedia';
+
+function Sobre() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+
+    }, [])
+
+    return (
+        <>
+            <Navbar />
+            <img className='imgSobre' src="https://imgur.com/DN4SB18.png" alt="Imagem Inicial" />
+            <h2 className='tituloSobre'>Sobre nós</h2>
+            <h3 className='textoSobre'>Somos uma instituição com intuito de auxiliar mulheres artistas, inclusas nas classes baixas da sociedade, a promover seu trabalho no nosso Marketplace, enaltecendo a igualdade de gênero com lucros justos e oportunidades de crescimento no ramo artístico.
+                Todas as artistas podem utilizar a plataforma para divulgar suas obras e qualquer pessoa pode adquiri-las.</h3>
+            <h2 className='tituloSobre'>Um novo conceito de galeria</h2>
+            <h3 className='textoSobre'>A galeria possue filtragem por suas categorias e nossas artistas, também podendo ser utilizado nossa plataforma de feed de noticias, onde pode receber conteudos postados sobre futuras obras e desenvolvimento delas.</h3>
+            <h2 className='tituloSobre'>Our Dev Team</h2>
+            <Box className='displaySobre'>
+                <Card className='cardbackgroundSobre displaycardSobre'>
+                    <img className='cardmediaSobre' src="https://i.imgur.com/8XINHQw.png" alt="" />
+                    <div className='displaytextSobre devteamtext pgrightp'>
+                        <div>
+                            <h1>GIULIA GALBIATI</h1>
+                            <p>Dev Full Stack</p>
+                            <h2>Criativa, curiosa e persistente, buscando sempre aprimorar meus conhecimentos e aprender muito mais, pronta para encarar os próximos desafios que surgirem e crescer profissionalmente. Full Stack com foco em Front End e Web Design.</h2>
+                        </div>
+                        <div className='iconessobre'>
+                            <a href="https://www.linkedin.com/in/giulia-galbiati-544bab1b1/" target='_blank'><img src="https://imgur.com/Ky865S6.png" alt="" /></a>
+                            <a href="https://github.com/giugalbiati" target='_blank'><img src="https://imgur.com/9hssxc3.png" alt="" /></a>
+                        </div>
+                    </div>
+                </Card>
+                <Card className='cardbackgroundSobre displaycardSobre'>
+                    <img className='cardmediaSobre' src="https://i.imgur.com/HjVEvo7.jpg" alt="" />
+                    <div className='displaytextSobre devteamtext pgrightp'>
+                        <div>
+                            <h1>GUILHERME RIVAS</h1>
+                            <p>Dev Full Stack</p>
+                            <h2>Desenvolvedor FullStack Jr com grande curiosidade em tudo que envolve tecnologia, com maior interesse em Análise de Dados e Big Data, disposto a aprender e encarar novos desafios.</h2>
+                        </div>
+                        <div className='iconessobre iconessobregui'>
+                            <a href="https://www.linkedin.com/in/guilherme-rivas/" target='_blank'><img src="https://imgur.com/Ky865S6.png" alt="" /></a>
+                            <a href="https://github.com/GuilhermeRivas" target='_blank'><img src="https://imgur.com/9hssxc3.png" alt="" /></a>
+                        </div>
+
+                    </div>
+
+                </Card>
+                <Card className='cardbackgroundSobre displaycardSobre'>
+                    <img className='cardmediaSobre' src="https://imgur.com/tS5reAO.png" alt="" />
+                    <div className='displaytextSobre devteamtext pgrightp'>
+                        <div>
+                            <h1>PEDRO JONES</h1>
+                            <p>Dev Full Stack</p>
+                            <h2>Próximo de se graduar em um curso superior de filosofia, me econtro atualmente em transição de carreira para atuar como desenvolvedor. Tendo-me capacitado através do curso da Generation Brasil, tenho o que é preciso para engressar nessa nova carreira.</h2>
+                        </div>
+                        <div className='iconessobre'>
+                            <a href="https://www.linkedin.com/in/pedro-jones-b7b7351a4/" target='_blank'><img src="https://imgur.com/Ky865S6.png" alt="" /></a>
+                            <a href="https://github.com/PedroJones" target='_blank'><img src="https://imgur.com/9hssxc3.png" alt="" /></a>
+                        </div>
+
+                    </div>
+
+                </Card>
+                <Card className='cardbackgroundSobre displaycardSobre'>
+                    <img className='cardmediaSobre' src="https://i.imgur.com/1raX63n.jpg" alt="" />
+                    <div className='displaytextSobre devteamtext pgrightp'>
+                        <div>
+                            <h1>VICTOR FRANÇA</h1>
+                            <p>Dev Full Stack</p>
+                            <h2>Escritor focado na área de Game Designer, cursando Análise e desenvolvimento de sistemas para aprimorar meus conhecimento no mundo da tecnologia e preparado para aplica-los nos meus trabalhos profissionais e projetos pessoais.</h2>
+                        </div>
+                        <div className='iconessobre'>
+                            <a href="https://www.linkedin.com/in/victor-fran%C3%A7a-5833b5224/" target='_blank'><img src="https://imgur.com/Ky865S6.png" alt="" /></a>
+                            <a href="https://github.com/Higlik" target='_blank'><img src="https://imgur.com/9hssxc3.png" alt="" /></a>
+                        </div>
+                    </div>
+
+                </Card>
+
+            </Box>
+
+
+        </>
+    )
+}
+
+export default Sobre;
+
+
+
+

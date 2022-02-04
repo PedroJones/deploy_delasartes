@@ -1,0 +1,34 @@
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.mg{
+   margin-top: 100px;
+}
+
+.textos1{
+    font-weight: bold !important;
+ }
+
+ .ButtonBGcolor{
+     background-color: black !important;
+     height: 48px;
+     width: 112px;
+ }
+
+ .textfieldwd{
+     width: 464px;
+     background: rgba(128, 194, 217, 0.37);
+     outline: none;
+     border: none;
+   
+ }
+
+ .buttonlogintext{
+     font-family: var(--bebas-neue);
+     color: white;
+     font-size: 23px;
+     margin-top: 20px;
+ }
+
+ 

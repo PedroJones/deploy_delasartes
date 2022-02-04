@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+.logoDA{
+  font-family: var(--font-family);
+  cursor: pointer;
+  color: #6B36CF;
+  margin-left: 36px;
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.fontnavbar p{
+  font-family: var(--abril-fatface);
+}
+
+
+.cursor{
+  cursor: pointer;
+  color: white;
+}
+
+.text-decorator-none{
+  text-decoration: none;
+}
+
+
+.displayNavBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top:0;
+  width: 100%;
+}
+
+.backgroundNavBar{
+  background-color: black;
+  
+}
+
+.displayarrow{
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+.mgarrow{
+  margin-bottom: 10px;
+}
+.displayitens{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin-top: 1rem;
+
+}
+
+.displayicones{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+  margin-right: 18px;
+  margin-bottom: 10px;
+}
+
+.tamanhoicones{
+  font-size: 35px !important;
+}
+
+
