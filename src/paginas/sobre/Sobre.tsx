@@ -19,8 +19,9 @@ function Sobre() {
             <Navbar />
             <img className='imgSobre' src="https://imgur.com/DN4SB18.png" alt="Imagem Inicial" />
             <h2 className='tituloSobre'>Sobre nós</h2>
-            <h3 className='textoSobre'>Somos uma instituição com intuito de auxiliar mulheres artistas, inclusas nas classes baixas da sociedade, a promover seu trabalho no nosso Marketplace, enaltecendo a igualdade de gênero com lucros justos e oportunidades de crescimento no ramo artístico.
-                Todas as artistas podem utilizar a plataforma para divulgar suas obras e qualquer pessoa pode adquiri-las.</h3>
+            <h3 className='textoSobre'>Somos uma instituição com intuito de auxiliar mulheres artistas, especificamente as inclusas nas classes baixas da sociedade, a promover seu trabalho no nosso Marketplace.
+            Enaltecendo a igualdade de gênero com lucros justos, alta visibilidade e oportunidades de crescimento no ramo artístico.</h3>
+            <h3 className='textoSobre'>Todas as artistas podem utilizar a plataforma para divulgar suas obras, e qualquer pessoa pode adquiri-las.</h3>
             <h2 className='tituloSobre'>Um novo conceito de galeria</h2>
             <h3 className='textoSobre'>A galeria possue filtragem por suas categorias e nossas artistas, também podendo ser utilizado nossa plataforma de feed de noticias, onde pode receber conteudos postados sobre futuras obras e desenvolvimento delas.</h3>
             <h2 className='tituloSobre'>Our Dev Team</h2>
@@ -31,9 +32,9 @@ function Sobre() {
                         <div>
                             <h1>GIULIA GALBIATI</h1>
                             <p>Dev Full Stack</p>
-                            <h2>Criativa, curiosa e persistente, buscando sempre aprimorar meus conhecimentos e aprender muito mais, pronta para encarar os próximos desafios que surgirem e crescer profissionalmente. Full Stack com foco em Front End e Web Design.</h2>
+                            <h2>Nascida em São Paulo capital. Criativa, curiosa e persistente, buscando sempre aprimorar meus conhecimentos e aprender novos, tenho interesse e foco em Front End e Web Design. Atualmente formada pela Generation Brasil.</h2>
                         </div>
-                        <div className='iconessobre'>
+                        <div className='iconessobregiu'>
                             <a href="https://www.linkedin.com/in/giulia-galbiati-544bab1b1/" target='_blank'><img src="https://imgur.com/Ky865S6.png" alt="" /></a>
                             <a href="https://github.com/giugalbiati" target='_blank'><img src="https://imgur.com/9hssxc3.png" alt="" /></a>
                         </div>
@@ -88,6 +89,9 @@ function Sobre() {
                 </Card>
 
             </Box>
+
+                            <h6 className='fraseAdicional'>delasArtes foi desenvolvido como Projeto Integrador do Bootcamp da Generation Brasil.</h6>
+                        
 
 
         </>
