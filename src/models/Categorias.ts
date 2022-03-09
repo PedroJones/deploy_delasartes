@@ -4,7 +4,8 @@ interface Categorias {
     id: number;
     genero: string;
     descricao: string;
-    produto?: Produto | null
+    produto?: Array<Produto>
+
 }
 
 export default Categorias;

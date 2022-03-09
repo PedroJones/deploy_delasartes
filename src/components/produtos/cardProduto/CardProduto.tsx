@@ -12,21 +12,7 @@ import './cardProduto.css';
 
 
 const CardProduto = () => {
-    const [prodts, setProdts] = useState<Produtos[]>([]);
-    let history = useHistory();
     const { id } = useParams<{ id: string }>();
-    const [userss, setUsers] = useState<User[]>([]);
-
-
-
-    const [user, setUser] = useState<User>(
-        {
-            id: 0,
-            nome: '',
-            usuario: '',
-            senha: ''
-        })
-
     const [produto, setProduto] = useState<Produtos>({
         id: 0,
         nome: '',
@@ -35,46 +21,22 @@ const CardProduto = () => {
         quantidade: 0,
         foto: '',
         categoria: null,
-        user: null
+        usuario: null
     })
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-        setProduto({
-            ...produto,
-            user: user
-        })
-    }, [user])
+    console.log(produto)
 
     useEffect(() => {
-        getCategorias()
-        if (id !== undefined) {
-            findByIdProduto(id)
-        }
+            findByIdProduto(id) 
+            
     }, [id])
-
-    async function getCategorias() {
-        await busca("/usuarios/all", setUsers, {
-
-        })
-    }
 
     async function findByIdProduto(id: string) {
         await buscaId(`produto/${id}`, setProduto, {
 
-        })
+        }
+        )
     }
-
-    function updatedProduto(e: ChangeEvent<HTMLInputElement>) {
-
-        setProduto({
-            ...produto,
-            [e.target.name]: e.target.value,
-            user: user
-        })
-
-    }
-
 
     return (
         <>
@@ -88,6 +50,7 @@ const CardProduto = () => {
                             <h2 className='titulo2card'>Descricao/Acabamento</h2>
                             <p className='textcard'>{produto.descricao}</p>
                             <div className='bordercard'></div>
+                            <p className='textcard'>{produto.usuario?.nome}</p>
                             <p className='preco'> R&#36; {produto.valor.toFixed(2)}</p>
                             <p className='textcard'> Quantidade Disponível: {produto.quantidade}</p>
                             <button className='botaocard'>Comprar</button>

@@ -19,6 +19,7 @@ export const api = axios.create({
     export const busca = async(url: any,setDado: any, header: any) => { 
         const resposta = await api.get(url,header)
         setDado(resposta.data)
+        
     }
 
 

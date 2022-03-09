@@ -9,7 +9,7 @@ interface Produtos {
     quantidade: Number;
     foto: string;
     categoria?: Categorias| null;
-    user?: User | null;
+    usuario?: User | null;
 
 }
 export default Produtos;

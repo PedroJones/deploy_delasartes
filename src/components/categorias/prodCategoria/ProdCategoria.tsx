@@ -1,80 +1,65 @@
-import React from 'react'
+import { Box, Card, Typography } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import { Link, useHistory, useParams } from 'react-router-dom';
+import Categorias from '../../../models/Categorias';
+import { buscaId } from '../../../services/Service';
+import Navbar from '../../estaticos/navbar/Navbar';
+
 
 const ProdCategoria = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const [categoria, setCategoria] = useState<Categorias>(
+    {
+      id: 0,
+      genero: '',
+      descricao: '',
+      produto: []
+    })
 
-export default ProdCategoria
+  const foto = categoria.descricao;
+  var produtos = categoria.produto;
 
-{/* -- EM CONSTRUÇÃO --
-
-
-  
-import React, { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import { busca, buscaId } from '../../../services/Service';
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
-import useLocalStorage from 'react-use-localstorage';
-import { useHistory } from 'react-router-dom'
-import Produto from '../../../models/Produto';
-import Navbar from '../../estaticos/navbar/Navbar';
-import { CardActionArea } from '@mui/material';
-import CardMedia from '@mui/material/CardMedia';
-import './ListarProduto.css';
-import Categorias from '../../../models/Categorias';
-
-
-
-function ListarProduto() {
-  const [categoria, setCategorias] = useState<Categorias[]>([])
   const { id } = useParams<{ id: string }>();
   let history = useHistory();
 
-  const [user, setUser] = useState<Categorias>(
-    {
-        id: 0,
-        genero: '',
-       descricao: '',
-        produto: null
-    })
- 
 
-  async function getCategoria() {
-    await buscaId(`categorias/${id}`, setCategorias, {
+  async function findByIdCategoria(id: string) {
+    await buscaId(`categorias/${id}`, setCategoria, {
+
     })
   }
 
+  console.log(categoria)
+  console.log(produtos)
+  console.log(foto)
   useEffect(() => {
-    window.scrollTo(0,0)
-    getCategoria()
+    window.scrollTo(0, 0)
+    if (id !== undefined) {
+      findByIdCategoria(id)
+    }
+    
+  }, [id])
 
-  }, [categoria.length])
 
   return (
     <>
-      <Navbar />
       <h1 className='prodtitulo'>OBRAS</h1>
       <Box className='display'>
-        {
-          categoria.map(cat => (
+      {
+          produtos?.map(post => (
             
             <Box m={2} >
-              <Link to={`categorias/${id}`} className="text-decorator-none">
+              <Link to={`/produto/${post.id}`} className="text-decorator-none">
               <Card className='cardbackground displaycard'>
-                <img className='cardmedia' src={categoria.produto?.foto} alt="" />
+                <img className='cardmedia' src={post.foto} alt="" />
                 <div className='displaytext font'>
                   <Typography  >
-                    <h1>{categoria.produto?}</h1>
+                    <h1>{post.nome}</h1>
                   </Typography>
                   <Typography  >
-                    <p> R&#36; {categoria.produto?.foto}</p>
+                    <p> R&#36; {post.valor.toFixed(2)}</p>
                   </Typography>
                   <Typography  >
-                    <p className='pgp'>{categoria.produto?.foto}</p>
+                    <p className='pgp'>{post.descricao}</p>
                   </Typography>
 
                 </div>
@@ -87,12 +72,17 @@ function ListarProduto() {
             </Box>
           ))
         }
+        
+        
+        
+        </Box>
 
-      </Box>
-
+       
+      
+      <Navbar/>
     </>
   )
 }
 
-export default ListarProduto;
-*/}
+export default ProdCategoria
+

@@ -18,6 +18,7 @@ import DeletaProduto from './components/produtos/deletaProduto/DeletaProduto';
 import PaginaLogin from './paginas/paginaLogin/PaginaLogin';
 import { Provider } from 'react-redux';
 import store from './store/store';
+import ProdCategoria from './components/categorias/prodCategoria/ProdCategoria';
 
 
 function App() {
@@ -55,6 +56,9 @@ function App() {
               <ListarCategorias />
             </Route>
 
+            <Route path='/categoria/:id'>
+              <ProdCategoria />
+            </Route>
 
             <Route path='/produtos'>
               <ListarProdutos />

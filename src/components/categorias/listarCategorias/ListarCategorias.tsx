@@ -13,18 +13,19 @@ function ListaCategorias() {
   const [categorias, setCategorias] = useState<Categorias[]>([])
   let history = useHistory();
 
- 
+
 
   async function getCategorias() {
     await busca("/categorias", setCategorias, {
-      
+
     })
   }
 
-
+  console.log(categorias)
   useEffect(() => {
     window.scrollTo(0, 0)
     getCategorias()
+    
   }, [categorias.length])
 
   return (
@@ -35,18 +36,21 @@ function ListaCategorias() {
         {
           categorias.map(categorias => (
 
-            <Box m={2}>
-              <Card className='categoriatm'>
-                <CardMedia
-                  component="img"
-                  alt="green iguana"
-                  height="570"
-                  image={categorias.descricao}
-                />
-               
+            <Link to={`/categoria/${categorias.id}`}>
+              <Box m={2}>
 
-              </Card>
-            </Box>
+                <Card className='categoriatm'>
+                  <CardMedia
+                    component="img"
+                    alt="green iguana"
+                    height="570"
+                    image={categorias.descricao}
+                  />
+                </Card>
+              </Box>
+
+            </Link>
+
           ))
         }
       </Box>
